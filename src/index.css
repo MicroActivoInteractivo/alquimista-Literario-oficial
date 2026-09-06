@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-display: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #05070d;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-cinzel {
+    font-family: var(--font-display);
+  }
+
+  .font-poem, .font-serif-literary {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(1.05); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes breathing-vagus {
+  0% { transform: scale(0.75); opacity: 0.5; }
+  45% { transform: scale(1.25); opacity: 0.95; }
+  55% { transform: scale(1.25); opacity: 0.95; }
+  100% { transform: scale(0.75); opacity: 0.5; }
+}
+
+.animate-vagus {
+  animation: breathing-vagus 16s ease-in-out infinite;
+}
+
+@keyframes alchemical-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes alchemical-spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes alchemical-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.5)) drop-shadow(0 0 24px rgba(56, 189, 248, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 0 22px rgba(251, 191, 36, 0.85)) drop-shadow(0 0 38px rgba(245, 158, 11, 0.6));
+  }
+}
+
+@keyframes alchemical-shimmer {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+
+@keyframes alchemical-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.035); }
+}
+
+.animate-alchemical-spin {
+  animation: alchemical-spin 20s linear infinite;
+}
+
+.animate-alchemical-spin-reverse {
+  animation: alchemical-spin-reverse 28s linear infinite;
+}
+
+.animate-alchemical-glow {
+  animation: alchemical-glow 4s ease-in-out infinite;
+}
+
+.animate-alchemical-shimmer {
+  animation: alchemical-shimmer 3.5s ease-in-out infinite;
+}
+
+.animate-alchemical-breathe {
+  animation: alchemical-breathe 6s ease-in-out infinite;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
+/* Reproductor Estilo Clásico/Literario */
+.classical-player {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+}
+.literary-btn {
+  background-color: #faf8f5; /* Color tipo papel/pergamino antiguo */
+  color: #2c2520; /* Marrón oscuro/tinta */
+  border: 1px solid #d1c7bd;
+  padding: 12px 20px;
+  border-radius: 4px; /* Bordes más rectos, estilo editorial */
+  cursor: pointer;
+  font-family: 'Georgia', serif; /* Tipografía literaria */
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.literary-btn:hover {
+  background-color: #f3ede4;
+  border-color: #bfae9e;
+  transform: translateY(-2px);
+}
+.music-icon {
+  font-style: normal;
+  font-size: 16px;
+}
+

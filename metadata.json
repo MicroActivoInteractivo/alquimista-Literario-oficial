@@ -1,0 +1,8 @@
+{
+  "name": "Remix El Alquimista Literario-app",
+  "description": "Micro Activo Interactivo de catarsis lírica, audiolibro con locución neutra y recitales líricos, estimulación del nervio vago, transmutación de emociones por IA y biblioteca de maestros alquímicos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
